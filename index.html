@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <title>Reponsive</title>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+</head>
+
+<body>
+    <section id="responsive">
+        <!--<form method="POST" action="">-->
+        <div class="container">
+            <div class="container_icon_open">
+                <div class="icon_open">
+                    <div>Choisissez votre avocat</div>
+                    <div class="icon_recherche">
+                        <span><i class="fas fa-search"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="filtre">
+                <div class="icon_search">
+                    <div class="appliquer-filtre"> Rechercher</div>
+                    <div class="fermer">
+                        <span><i class="fas fa-times"></i></span>
+                    </div>
+                </div>
+                <div class="domaine">
+                    <select id="select_domaine" name="domaine">
+                        <option value="Domaine Juridique">Domaine Juridique</option>
+                        <option value="État civil">État civil</option>
+                        <option value="Impot">Impot</option>
+                        <option value="Allocation familiale">Allocation familiale</option>
+                        <option value="Taxes locales">Taxes locales</option>
+                    </select>
+                </div>
+                <div class="prix">
+                    <p>
+                        <span class="prix_minmax">Prix minimum</span>
+                        <input type="number" id="prix_min" name="prix_min" placeholder="€">
+
+                    </p>
+                    <p class="prix_max">
+                        <span class="prix_minmax">Prix maximum</span>
+                        <input type="number" id="prix_max" name="prix_max" placeholder="€">
+                    </p>
+                </div>
+                <div class="gratuit">
+                    <label id="gratuit">
+                        <p>Premier rendez-vous gratuit</p>
+                    </label>
+                    <input type="checkbox" name="gratuit" id="check_gratuit">
+                </div>
+                <div class="button_check_aide_juridique">
+                    <label id="aide_juridique" name="aide_juridique">
+                        <p>Aide Juridictionnelle</p>
+                    </label>
+                    <input type="checkbox" name="filtre_aide_juridique" />
+                </div>
+                <div class="ville">
+                    <select id="select_ville" name="ville">
+                        <option value="Choisissez votre localisation">Localisation</option>
+                        <option value="Paris">Paris</option>
+                        <option name="Creteil">Creteil</option>
+                        <option name="Ivry-Sur-Seine">Ivry-Sur-Seine</option>
+                        <option name="Kremlin Bicêtre">Kremlin Bicêtre</option>
+                    </select>
+                </div>
+                <div class="langue">
+                    <select id="select_langue" name="langue" placeholder="Moi">
+                        <option value="Langue">Langue</option>
+                        <option value="Paris">Français</option>
+                        <option name="Creteil">Anglais</option>
+                        <option name="Ivry-Sur-Seine">Espagnol</option>
+                        <option name="Kremlin Bicêtre">Arabe</option>
+                    </select>
+                </div>
+
+                <div class="barre_de_recherche_et_effacer">
+                    <div class="barre_de_recherche">
+                        <button type="submit" id="barre_de_recherche" name="barre_de_recherche">
+                            Trouver mon avocat
+                        </button>
+                    </div>
+                    <div class="effacer">
+                        <button type="submit" name="effacer" id="effacer">
+                            Effacer
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--</form>-->
+    </section>
+    <section id="annuaire">
+        <div class="container">
+            <div class="annuaire">
+                <div class="annuaire_item">
+                    <p class="titre_nom">Maître Mike Ross</p>
+                    <div class="tout">
+                        <div class="photo_profil">
+                            
+                            <img src="./image/mike.webp" />
+                        </div>
+                        <div class="description">
+                            <div class="description_item">
+
+                                <p><span><i class="fas fa-map-marker"></i></span>  New York</p>
+                                <p><span><i class="fas fa-briefcase"></i></span>  2 annnées d'expérience</p>
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <p class="description_domaine_item">Spécialités: Escoquerie, Etat civil, mariar...</p>
+                </div>
+                <!--autre grid-->
+                <div class="annuaire_item">
+                    <p class="titre_nom">Maître Harvey Specter</p>
+                    <div class="tout">
+                        <div class="photo_profil">
+                            
+                            <img src="./image/harvey.jpg" />
+                        </div>
+                        <div class="description">
+                            <div class="description_item">
+
+                                <p><span><i class="fas fa-map-marker"></i></span>  Paris</p>
+                                <p><span><i class="fas fa-briefcase"></i></span>  18 annnées d'expéreince</p>
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <p class="description_domaine_item">Spécialités: Impot sur les socités, Droit des...</p>
+                </div>
+                <!--autre grid-->
+                <div class="annuaire_item">
+                    <p class="titre_nom">Maître Louis Litt</p>
+                    <div class="tout">
+                        <div class="photo_profil">
+                            
+                            <img src="./image/louis.jpeg" />
+                        </div>
+                        <div class="description">
+                            <div class="description_item">
+
+                                <p><span><i class="fas fa-map-marker"></i></span>  Marseille</p>
+                                <p><span><i class="fas fa-briefcase"></i></span>  15 annnées d'expérience</p>
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <p class="description_domaine_item">Spécialités: Crontrôle fiscal, Taxes loxales, ...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script type="module" src="/main.js"></script>
+</body>
+
+</html>
+
+    
+    
+    
+   

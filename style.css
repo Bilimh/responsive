@@ -1,0 +1,327 @@
+/*:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}*/
+
+
+/*@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}*/
+
+
+
+
+* {
+  --color-Main: #0b2539;
+  --color-Green: #2ccc84;
+  --color-Blue: #2625b8;
+  --color1: rgb(254, 144, 99);
+}
+
+html{
+  font-family: "Roboto",sans-serif;
+}
+body{
+  background: var(--color-Main);
+}
+
+.container{
+  width: 736px;
+  margin: 0 auto;
+  background-color: var(--color-Main);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#responsive{
+  position: relative;
+}
+.filtre{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+ justify-content: space-around;
+ align-items: stretch;
+ height: 100vh;
+ padding: 10px;
+ position: absolute;
+ z-index: 2;
+}
+.prix,
+.barre_de_recherche_et_effacer{
+  display: flex;
+}
+label{
+  display: flex;
+  width: 100%;
+}
+p{
+  width: 100%;
+}
+.prix_max {
+ width: 30%;
+}
+
+.barre_de_recherche_et_effacer{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+
+.barre_de_recherche{
+  width: 75%;
+ 
+}
+select{
+  padding: 10px;
+  border: none;
+}
+
+input{
+  padding: 5px;
+  border: none;
+}
+input:focus{
+  border-color: #2ccc84;
+  outline: none;
+}
+select{
+  width: 100%;
+  /*pointer-events: none;*/
+  appearance: none; /* Supprimer le style par défaut du navigateur */
+  -webkit-appearance: none; /* Pour les navigateurs basés sur WebKit (comme Chrome, Safari) */
+  -moz-appearance: none; /* Pour les navigateurs basés sur Gecko (comme Firefox) */
+}
+
+
+select::before {
+  content: '\25C0'; /* Code Unicode pour une flèche pointant vers la gauche */
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-Blue); /* Couleur de la flèche */
+  pointer-events: none; /* Empêcher la flèche de bloquer les interactions avec le select */
+}  
+button{
+  width: 100%;
+  border-radius: 15px;
+  background: var(--color-Green);
+  /*background-color: rgb(254, 144, 99);*/
+  color: white;
+  padding: 8px;
+  border: 1px solid transparent;
+  font-weight: bold;
+}
+.barre_de_recherche button:hover{
+  background: var(--color-Green);
+  border: none;
+}
+.effacer{
+  width: 20%;
+}
+.effacer button {
+  background-color: var(--color1);
+  color: white;
+  border: 1px solid var(--color1);
+}
+.button_check_aide_juridique, .gratuit{
+  display: flex;
+}
+
+/** masque le filtre*/
+
+.filtre_masque{
+  transform: translateY(-200%);
+  transition: transform 1s;
+}
+.filtre_vu{
+  transform: translateY(0);
+  transition: transform 0.8s;
+}
+
+.filtre{
+  background-color: #ffffff;
+}
+
+
+.fermer{
+  /*background-color: var(--color1);*/
+  color: black;
+  /*padding: 8px;*/
+  /*border-radius: 35px;*/
+  cursor: pointer;
+  font-family: "Roboto",sans-serif;
+  /*color: white;*/
+  font-size: 38px;
+  font-weight: 300;
+}
+.icon_search{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  border-bottom: 1px solid var(--color-Main);
+  padding-bottom: 5px;
+}
+.appliquer-filtre{
+  width: 80%;
+ text-align: center;
+
+}
+.container_icon_open{
+  background-color: var(--color-Green);
+  width: 90%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  border-radius: 30px;
+  margin-top: 23px;
+}
+.icon_open{
+  /*margin-top: 23px;*/
+  background-color: white;
+  border: 1px solid white;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 15px;
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+}
+#annuaire{
+  color: white;
+  padding: 20px 10px;
+}
+@media screen and  (max-width: 737px){
+  .container{
+      width: 100%;
+  }
+  .prix p{
+      width: 100%;
+  }
+ 
+  .prix input{
+      width: 80%;
+      /*background: var(--color1);*/
+      border-bottom: 1px solid var(--color-Green);
+      text-align: center;
+  }
+  select{
+      border-bottom: 1px solid var(--color-Green);
+      background: transparent;
+      /*color: white;*/
+      font-size: 15px;
+  }
+  
+  .prix_max {
+      margin-left: 60px;
+  }
+  .prix_min {
+      margin-right: 15px;
+  }
+
+  input{
+      /*pointer-events: none;*/
+      width: 10%;
+      appearance: ; /* Supprimer le style par défaut du navigateur */
+       /* Pour les navigateurs basés sur WebKit (comme Chrome, Safari) */
+      -moz-appearance: textfield; /* Pour les navigateurs basés sur Gecko (comme Firefox) */
+  }
+  input[type="checkbox"]{
+      color: green;
+      background: red;
+  }
+  .button_check_aide_juridique input:checked + label:before{
+      color: green;
+      background: var(--color1);
+  }
+
+  .button_check_aide_juridique input  label:before{
+      color: green;
+      background: var(--color1);
+      content: '';
+  }
+  select option:hover{
+      background: #2ccc84;
+      color: red;
+  }
+  .prix_minmax{
+      font-size: 11px;
+      margin-left: 23%;
+  }
+
+  .annuaire{
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 10px;
+  }
+  .annuaire_item{
+      display: flex;
+      max-width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: white;
+      padding: 10px;
+      color: black;
+      border-radius: 20px;
+  }
+
+  .tout{
+      display: flex;
+      max-width: 100%;
+      justify-content: space-between;
+      align-items: center;
+  }
+  .photo_profil{
+      width: 60%;
+  }
+  .description{
+      width: 35%;
+  }
+  .titre_nom{
+      font-size: 16px;
+      font-weight: bold;
+  }
+  .photo_profil img{
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+  }
+  .description_domaine_item{
+      background: var(--color1);
+      padding: 8px;
+      color: white;
+      font-size: 16px;
+      border-radius: 16px;
+      text-align: center;
+  }
+  .description_item{
+      color: blue;
+  }
+
+
+  
+
+}
