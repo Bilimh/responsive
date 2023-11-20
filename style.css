@@ -219,8 +219,14 @@ button{
     
   }
   .filtre{
-    height: 100vh;
+    min-height: 100vh;
+    /*justify-content: flex-start;
+    align-items: space-between;
+    flex-wrap: wrap;*/
   }
+  /*div{
+    margin-bottom: 1rem;
+  }*/
   
   .prix p{
       width: 100%;
@@ -323,7 +329,7 @@ button{
       text-align: center;
   }
   .description_item{
-      color: blue;
+      color: var(--color-Blue);
   }
   body.no-scroll{
     overflow: hidden;
