@@ -216,7 +216,12 @@ button{
 @media screen and  (max-width: 737px){
   .container{
       width: 100%;
+    
   }
+  .filtre{
+    height: 100vh;
+  }
+  
   .prix p{
       width: 100%;
   }
@@ -319,6 +324,12 @@ button{
   }
   .description_item{
       color: blue;
+  }
+  body.no-scroll{
+    overflow: hidden;
+  }
+  body.yes-scroll{
+    overflow: visible;
   }
 
 
