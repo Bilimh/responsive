@@ -21,16 +21,13 @@ function ouvrirFiltre() {
     filtre.classList.add('filtre_vu');
     iconSearch.style.display = "flex";
     body.classList.add('no-scroll');
+    filtre.style.position ='fixed'
 }
 
 function fermerFiltre() {
     filtre.classList.add('filtre_masque');
     filtre.classList.remove('filtre_vu');
     iconSearch.style.display = "none";
-
-    // Vérifier si le filtre est actuellement ouvert avant de supprimer la classe no-scroll
-    if (!filtre.classList.contains('filtre_vu')) {
-        body.classList.remove('no-scroll');
-    }
+    //filtre.style.position ='static'
 }
 
