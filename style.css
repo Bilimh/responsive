@@ -157,6 +157,10 @@ button{
 }
 .masque_annuaire{
   display: none;
+  
+}
+.style_body{
+  background-color: var(--color-Green);
 }
 .filtre_vu{
   transform: translateY(0);

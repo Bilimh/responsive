@@ -4,7 +4,7 @@ const filtre = document.querySelector('.filtre');
 const iconSearch = document.querySelector('.icon_search');
 const iconOpen = document.querySelector('.icon_open');
 const fermer = document.querySelector('.fermer');
-//const body = document.body;
+const body = document.body;
 const annuaire = document.querySelector('#annuaire')
 
 filtre.classList.add('filtre_masque');
@@ -21,7 +21,7 @@ function ouvrirFiltre() {
     filtre.classList.remove('filtre_masque');
     filtre.classList.add('filtre_vu');
     iconSearch.style.display = "flex";
-    //body.classList.add('no-scroll');
+    body.classList.add('style_body');
     //filtre.style.position ='fixed'
     annuaire.classList.add('masque_annuaire');
    
@@ -31,7 +31,7 @@ function fermerFiltre() {
     filtre.classList.add('filtre_masque');
     filtre.classList.remove('filtre_vu');
     iconSearch.style.display = "none";
-    //filtre.style.position ='static'
+    body.classList.remove('style_body');
     annuaire.classList.remove('masque_annuaire');
 }
 
