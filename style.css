@@ -227,10 +227,7 @@ button{
     align-items: space-between;
     flex-wrap: wrap;*/
   }
-  .filtre_vu {
-    max-height: 80vh; 
-    overflow-y: auto;
-  }
+ 
   .filtre_ouvert{
     overflow: auto;
   }
