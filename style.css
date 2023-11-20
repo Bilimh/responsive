@@ -224,6 +224,10 @@ button{
     align-items: space-between;
     flex-wrap: wrap;*/
   }
+  .filtre_vu {
+    max-height: 80vh; 
+    overflow-y: auto;
+  }
   /*div{
     margin-bottom: 1rem;
   }*/
@@ -337,8 +341,7 @@ button{
   body.yes-scroll{
     overflow: visible;
   }
-
-
   
+
 
 }
